@@ -3,10 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/laravel5/resources/views/report/report.blade.php</file>
-            <file>file:/C:/xampp/htdocs/laravel5/resources/views/keyin/master/index.blade.php</file>
+            <file>file:/C:/xampp/htdocs/laravel5/app/Articles.php</file>
             <file>file:/C:/xampp/htdocs/laravel5/routes/web.php</file>
-            <file>file:/C:/xampp/htdocs/laravel5/resources/views/layouts/main.blade.php</file>
+            <file>file:/C:/xampp/htdocs/laravel5/app/Http/Controllers/ArticlesController.php</file>
         </group>
     </open-files>
 </project-private>

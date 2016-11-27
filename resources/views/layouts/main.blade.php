@@ -8,33 +8,26 @@
 
         <title>Laravel - @yield('page_title')</title>
 
-        <!-- Fonts -->
-<!--        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">-->
-        <!-- Bootstrap Core CSS -->
-         <link rel="stylesheet" type="text/css" href="{{asset('./vendor/twbs/bootstrap/dist/css/bootstrap.min.css')}}"/> 
-        {!! Html::style('./vendor/twbs/bootstrap/dist/css/bootstrap.min.css') !!}
-        {!! Html::style('./vendor/fortawesome/font-awesome/css/font-awesome.min.css') !!}       
-        <!--        <link href="../../../vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-                <link href="css/bootstrap.min.css" rel="stylesheet">
-                 Custom Fonts 
-                <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+        {!! Html::style('vendor/bootstrap/css/bootstrap.min.css') !!}
+        {!! Html::style('vendor/font-awesome/css/font-awesome.min.css') !!}       
+
         <!-- Styles -->
         <style>
             html, body {
                 background-color: #fff;
                 color: #636b6f;
                 font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
-                font-weight: 100;
+                font-weight: 11px;
                 /*                height: 100vh;*/
                 margin: 0;
-                padding-top: 70px;
+                padding-top: 35px;
             }
 
             /*            .full-height {
                             height: 100vh;
                         }*/
 
-            .flex-center {
+/*            .flex-center {
                 align-items: center;
                 display: flex;
                 justify-content: center;
@@ -42,7 +35,7 @@
 
             .position-ref {
                 position: relative;
-            }
+            }*/
 
             /*            .top-right {
                             position: absolute;
@@ -50,12 +43,12 @@
                             top: 18px;
                         }*/
 
-            .content {
+/*            .content {
                 text-align: center;
-            }
+            }*/
 
             .title {
-                font-size: 54px;
+                font-size: 20px;
             }
 
             .links > a {
@@ -76,7 +69,7 @@
     <body>
         @include('layouts.navbar')
 
-        <div class="container-fluid">
+        <div class="container">
             <div class="flex-center position-ref full-height">
                 <!--                @if (Route::has('login'))
                                 <div class="top-right links">
@@ -93,7 +86,7 @@
                     <div class="title m-b-md">
                         @yield('title')
                     </div>
-                    <div class="jumbotron">
+                    <div>
                         @yield('content')
                     </div>
                     <div class="links">
@@ -106,10 +99,10 @@
                 </div>
             </div>
         </div>
-        {!! Html::script('./vendor/frameworks/jquery/jquery.min.js') !!}
-        {!! Html::script('./vendor/twbs/bootstrap/dist/js/bootstrap.min.js') !!}
-        {!! Html::script('./vendor/bootstrap-validator/dist/validator.min.js') !!}
-
+        {!! Html::script('vendor/jquery/jquery.min.js') !!}
+        {!! Html::script('vendor/bootstrap/js/bootstrap.min.js') !!}
+        {!! Html::script('vendor/bootstrap-validator/dist/validator.min.js') !!}
+        
     </body>
 </html>
 

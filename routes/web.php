@@ -26,11 +26,11 @@ Route::get('/hello', function() {
 Route::group(['prefix' => 'user'], function () {
 
     // Matches The "/user/users" URL
-    Route::get('/', 'UserController@index')->name('index');
+    Route::get('/', 'UserController@index');
 
-    Route::get('/profile', 'UserController@showProfile')->name('showProfile');
+    Route::get('/profile', 'UserController@showProfile');
 
-    Route::post('/login', 'UserController@login')->name('login');
+    Route::post('/login', 'UserController@login');
 
     Route::get('/profile/{id}', function ($id) {
         return $url = route('profile', ['id' => $id]);
@@ -40,15 +40,14 @@ Route::group(['prefix' => 'user'], function () {
 //Route::controller('user','UserController');
 
 Route::group(['prefix' => 'keyin'], function () {
-    Route::get('/', 'KeyinController@index')->name('keyin');
-    Route::get('/master/{table?}', 'KeyinController@showKeyinMaster')->name('master');
+    Route::get('/', 'KeyinController@index');
+    Route::get('/master/{table?}', 'KeyinController@showKeyinMaster');
 });
 
 Route::group(['prefix' => 'report'], function () {
-    Route::get('/{id?}', 'ReportController@index')->name('index');
+    Route::get('/{id?}', 'ReportController@index');
     //Route::get('/{id}', 'ReportController@showReport')->name('report');
 });
-
 
 Route::group(['prefix' => 'articles'], function () {
     Route::get('/', 'ArticlesController@index');  // retrieve
