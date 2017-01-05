@@ -49,11 +49,14 @@ Route::group(['prefix' => 'report'], function () {
     //Route::get('/{id}', 'ReportController@showReport')->name('report');
 });
 
+
+Route::get('/articles/create', 'ArticlesController@create'); // Create
+
 Route::group(['prefix' => 'articles'], function () {
     Route::get('/', 'ArticlesController@index');  // retrieve
     Route::get('/{id}', 'ArticlesController@show'); //retrieve
     Route::get('/create', 'ArticlesController@create'); // Create
-    Route::post('/', 'ArticlesController@store'); // Insert    
+    Route::post('/', 'ArticlesController@store'); // Insert
     Route::get('/{id}/edit', 'ArticlesController@edit'); //edit
     Route::put('/{id}', 'ArticlesController@update'); //update
     Route::delete('/{id}', 'ArticlesController@detroy'); //detroy

@@ -8,7 +8,7 @@ use App\Articles;
 class ArticlesController extends Controller {
 
     public function __construct() {
-        $this->middleware('auth', ['except' => ['index', 'show']]);
+      //$this->middleware('auth', ['except' => ['index', 'show','create']]);
     }
 
     public function index() {
@@ -26,11 +26,13 @@ class ArticlesController extends Controller {
     }
 
     public function create() {
-        return view('articales.create');
+        return view('articles.create');
     }
 
     public function store() {
-        return '<h1>store articles page </h1>';
+        $input = Request::all();
+        Articles::create($input);
+        return redirect('articles');
     }
 
     public function edit() {
